@@ -10,8 +10,8 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_user")
-public class User implements Serializable{
-    
+public class User implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -96,5 +96,4 @@ public class User implements Serializable{
         return true;
     }
 
-    
 }
