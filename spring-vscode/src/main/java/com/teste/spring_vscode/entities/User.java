@@ -1,6 +1,6 @@
 package com.teste.spring_vscode.entities;
 
-import java.io.Serializable;
+
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_user")
-public class User implements Serializable {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

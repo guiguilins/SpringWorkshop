@@ -1,6 +1,6 @@
 package com.teste.spring_vscode.entities;
 
-import java.io.Serializable;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.teste.spring_vscode.entities.pk.OrderItemPK;
@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_order_item")
-public class OrderItem implements Serializable{
+public class OrderItem {
     
     @EmbeddedId
     private OrderItemPK id = new OrderItemPK();
@@ -41,6 +41,7 @@ public class OrderItem implements Serializable{
         id.setOrder(order);
     }
 
+    @JsonIgnore
     public Product getProduct() {
         return id.getProduct();
     }
@@ -64,6 +65,11 @@ public class OrderItem implements Serializable{
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public double getSubTotal() {
+        return quantity * price;
+    }
+
 
     @Override
     public int hashCode() {
