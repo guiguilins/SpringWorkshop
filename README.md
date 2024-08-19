@@ -3,6 +3,11 @@
 ## Descrição
 Este é um projeto de demonstração para Spring Boot, configurado para usar PostgreSQL como banco de dados. O projeto inclui várias dependências do Spring Boot e outras bibliotecas úteis.
 
+##Modelo de dominio
+
+<img src="assets/image/Screenshot_82.png" alt="drawing" width="928"/>
+
+
 ## Estrutura do Projeto
 - `src/main/java/com/teste/spring_vscode/`: Contém a classe principal do aplicativo Spring Boot.
 - `src/main/resources/`: Contém arquivos de configuração, como `application-dev.properties`.
